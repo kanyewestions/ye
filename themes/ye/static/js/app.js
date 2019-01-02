@@ -3,17 +3,25 @@
 document.addEventListener("DOMContentLoaded", function(DOMReady) {
   console.log(DOMReady);
 
-  console.log(window.location.origin);
-  console.log(window.location.host);
-  console.log(window.location.protocol);
+  var quips = [
+    
+  ];
 
-  var go = axios.create({
-    baseURL: window.location.protocol + window.location.host
-  });
-
-  var kwestions = go.get('http://localhost:1313/js/kwestions.json')
-      .then(function(response) {
-        return response.data;
+  axios.get('/js/kwestions.json')
+    .then(function(response) {
+        var kwestions = response.data;
+        var with_questions = kwestions.songs.filter((song) => {
+          if (song.questions.length > 0) {
+            return song;
+          }
+        });
+        var song = randomChoice(with_questions);
+        var kwestion = randomChoice(song.questions);
+        console.log(song);
+        console.log(kwestion);
       });
-
 });
+
+function randomChoice(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
