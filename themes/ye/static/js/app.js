@@ -9,10 +9,11 @@ document.addEventListener("DOMContentLoaded", function(DOMReady) {
     'Yeesh, that was tough.',
     'Kanye answer it?',
     'Kwest for the win.',
-    'Kanye stop? I don’t think you can.',
+    'Kanye stop?',
     'Ye are a legend.',
     'Kanye believe it?',
-    'Ye got this!'
+    'Ye got this!',
+    'Kanye stop?'
   ];
 
   axios.get('/js/kwestions.json')

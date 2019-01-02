@@ -22,22 +22,17 @@ a:visited {
   color: white;
 }
 
-#header {
-  text-transform: uppercase;
+#content {
   display: flex;
   flex-direction: column;
-}
-
-#header nav span {
-  font-size: 1.6rem;
-  position: absolute;
-  right: 0;
+  height: 100%;
 }
 
 #kanyecard {
   text-align: center;
   margin: 1rem;
   border-radius: 0.4rem;
+  flex-grow: 1;
 }
 
 #head {
@@ -66,12 +61,24 @@ a:visited {
   text-decoration: none;
 }
 
-#next::after {
-  content: " Next Kwestion";
+#trackinfo::before {
+  content: "🎵"
 }
 
 #controls {
-  display: flex;
-  flex-direction: column;
+  margin-top: 1.6rem;
   text-align: center;
+  background: white;
+}
+
+#next {
+  font-family: 'Staatliches', cursive;
+  font-size: 1.3rem;
+  padding: 1rem;
+  display: block;
+  color: black;
+}
+
+#next::after {
+  content: " Next Kwestion"
 }
