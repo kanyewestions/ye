@@ -1,0 +1,67 @@
+html, body, h1, h2, h3, h4, p, a, div, span, section {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-family: 'Work sans',sans-serif;
+  line-height: 1.5rem;
+  height: 100%;
+}
+
+#header {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+}
+
+#header nav span {
+  font-size: 1.6rem;
+  position: absolute;
+  right: 0;
+}
+
+.kanyecard {
+  background: hotpink;
+  text-align: center;
+  margin: 1rem;
+  border-radius: 0.4rem;
+}
+
+#kanyehead {
+  padding: 2rem 0 1rem 0;
+}
+
+#kanyehead img {
+  min-height: 10rem;
+  max-height: 10rem;
+  filter: drop-shadow(0 0.6rem 0.6rem rgba(0, 0, 0, 0.9));
+}
+
+#kanyewestion {
+  font-family: 'Staatliches', cursive;
+  font-size: 1.24rem;
+  line-height: 2rem;
+  padding: 1rem 0 2rem 0;
+}
+
+#trackinfo {
+  padding: 0 0 1.4rem 0;
+}
+
+#trackinfo a {
+  color: white;
+  text-decoration: none;
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
