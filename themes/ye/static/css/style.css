@@ -13,6 +13,8 @@ html, body {
   font-family: 'Work sans',sans-serif;
   line-height: 1.5rem;
   height: 100%;
+  color: white;
+  background-color: black;
 }
 
 #header {
@@ -28,7 +30,6 @@ html, body {
 }
 
 .kanyecard {
-  background: hotpink;
   text-align: center;
   margin: 1rem;
   border-radius: 0.4rem;
@@ -41,7 +42,7 @@ html, body {
 #kanyehead img {
   min-height: 10rem;
   max-height: 10rem;
-  filter: drop-shadow(0 0.6rem 0.6rem rgba(0, 0, 0, 0.9));
+  filter: drop-shadow(0 0 0.8rem rgba(255, 255, 255, 0.3));
 }
 
 #kanyewestion {
