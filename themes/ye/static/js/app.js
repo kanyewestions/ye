@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function(DOMReady) {
     'Ye are a legend.',
     'Kanye believe it?',
     'Ye got this!',
-    'Kanye stop?'
+    'Kanye stop?',
+    'No need to be chi.'
   ];
 
   axios.get('/js/kwestions.json')
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function(DOMReady) {
           if (song.questions.length > 0) {
             return song;
           }
-        })
+        });
 
         var song = randomChoice(with_questions);
         var kwestion = randomChoice(song.questions);
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function(DOMReady) {
         var kanye = document.getElementById('head').children[0].getAttribute('src');
 
         document.getElementById('kwestion').children[0].innerHTML = kwestion;
+        document.getElementsByTagName('title')[0].innerHTML = kwestion + ' - Kwestion';
         document.getElementById('next').innerHTML = quip;
         document.getElementById('trackinfo').innerHTML = song.song_title;
         document.querySelector('meta[property~="og:title"]').setAttribute('content',kwestion);
@@ -46,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function(DOMReady) {
           document.getElementById('kwestion').children[0].innerHTML = kwestion;
           document.getElementById('next').innerHTML = quip;
           document.getElementById('trackinfo').innerHTML = song.song_title;
-
+          document.getElementsByTagName('title')[0].innerHTML = kwestion + ' - Kwestion';
           document.querySelector('meta[property~="og:title"]').setAttribute('content',kwestion);
           document.querySelector('meta[property~="og:image"]').setAttribute('content', window.location.origin + '/'+ kanye);
           }
