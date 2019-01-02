@@ -1,6 +1,7 @@
 html, body, h1, h2, h3, h4, p, a, div, span, section {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 html, body {
@@ -17,6 +18,10 @@ html, body {
   background-color: black;
 }
 
+a:visited {
+  color: white;
+}
+
 #header {
   text-transform: uppercase;
   display: flex;
@@ -29,23 +34,23 @@ html, body {
   right: 0;
 }
 
-.kanyecard {
+#kanyecard {
   text-align: center;
   margin: 1rem;
   border-radius: 0.4rem;
 }
 
-#kanyehead {
+#head {
   padding: 2rem 0 1rem 0;
 }
 
-#kanyehead img {
+#head img {
   min-height: 10rem;
   max-height: 10rem;
   filter: drop-shadow(0 0 0.8rem rgba(255, 255, 255, 0.3));
 }
 
-#kanyewestion {
+#kwestion {
   font-family: 'Staatliches', cursive;
   font-size: 1.24rem;
   line-height: 2rem;
@@ -59,6 +64,10 @@ html, body {
 #trackinfo a {
   color: white;
   text-decoration: none;
+}
+
+#next::after {
+  content: " Next Kwestion";
 }
 
 #controls {
