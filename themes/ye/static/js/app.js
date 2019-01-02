@@ -29,10 +29,13 @@ document.addEventListener("DOMContentLoaded", function(DOMReady) {
         var song = randomChoice(with_questions);
         var kwestion = randomChoice(song.questions);
         var quip = randomChoice(quips);
+        var kanye = document.getElementById('head').children[0].getAttribute('src');
 
         document.getElementById('kwestion').children[0].innerHTML = kwestion;
         document.getElementById('next').innerHTML = quip;
         document.getElementById('trackinfo').innerHTML = song.song_title;
+        document.querySelector('meta[property~="og:title"]').setAttribute('content',kwestion);
+        document.querySelector('meta[property~="og:image"]').setAttribute('content', window.location.origin + '/'+ kanye);
 
         document.getElementById('next').onclick = function(event) {
           event.preventDefault();
@@ -43,6 +46,8 @@ document.addEventListener("DOMContentLoaded", function(DOMReady) {
           document.getElementById('kwestion').children[0].innerHTML = kwestion;
           document.getElementById('next').innerHTML = quip;
           document.getElementById('trackinfo').innerHTML = song.song_title;
+
+          document.querySelector('meta[property~="og:title"]').setAttribute('content',kwestion);
           }
         });
 });
