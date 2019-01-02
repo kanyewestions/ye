@@ -62,7 +62,10 @@ a:visited {
 }
 
 #trackinfo::before {
-  content: "🎵"
+  content: "🎙";
+  font-size: 2rem;
+  vertical-align: middle;
+  padding: 0.2rem;
 }
 
 #controls {
