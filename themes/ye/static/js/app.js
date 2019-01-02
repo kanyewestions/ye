@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function(DOMReady) {
           document.getElementById('trackinfo').innerHTML = song.song_title;
 
           document.querySelector('meta[property~="og:title"]').setAttribute('content',kwestion);
+          document.querySelector('meta[property~="og:image"]').setAttribute('content', window.location.origin + '/'+ kanye);
           }
         });
 });
