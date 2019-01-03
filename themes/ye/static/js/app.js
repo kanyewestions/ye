@@ -36,9 +36,7 @@ document.addEventListener("DOMContentLoaded", function(DOMReady) {
         document.getElementsByTagName('title')[0].innerHTML = kwestion + ' - Kwestion';
         document.getElementById('next').innerHTML = quip;
         document.getElementById('trackinfo').innerHTML = song.song_title;
-        document.querySelector('meta[property~="og:title"]').setAttribute('content',kwestion);
-        document.querySelector('meta[property~="og:image"]').setAttribute('content', window.location.origin + '/'+ kanye);
-
+        
         document.getElementById('next').onclick = function(event) {
           event.preventDefault();
           var song = randomChoice(with_questions);
