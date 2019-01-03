@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function(DOMReady) {
     'Kanye believe it?',
     'Ye got this!',
     'Kanye stop?',
-    'No need to be chi.'
+    'No need to be chi.',
+    'Yeezy peasy.'
   ];
 
   axios.get('/js/kwestions.json')
@@ -36,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function(DOMReady) {
         document.getElementsByTagName('title')[0].innerHTML = kwestion + ' - Kwestion';
         document.getElementById('next').innerHTML = quip;
         document.getElementById('trackinfo').innerHTML = song.song_title;
-        
+
         document.getElementById('next').onclick = function(event) {
           event.preventDefault();
           var song = randomChoice(with_questions);
